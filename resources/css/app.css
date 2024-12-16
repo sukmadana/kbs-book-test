@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button-add{
+    transition: all 1s ease-in;
+}
+
+.button-add:hover{
+    transition: all 1s ease-in;
+}
+.button-add:hover > .button-add-text{
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+}
+

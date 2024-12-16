@@ -13,11 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/', 'welcome');
+// Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
+Route::view('/', 'dashboard')
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    ->name('home');
+
+Route::view('tambah-buku', 'tambah-buku')
+    ->middleware(['auth', 'verified'])
+    ->name('buku.create');
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])
